@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="user">
+         <!-- <button id="adduser">Click me</button>  -->
+        <button onclick ="sampleuser()">Click</button>
+        <ol id="userlist">
+            
+        </ol>
+        <script>
+    
+        //   document.getElementById('adduser').onclick=function(){
+        //     var newuser=document.getElementById('user').value;
+        //    if(newuser){
+        //     document.getElementById('userlist').innerHTML  +="<li>"+ newuser+"</li>";
+    
+        //   }else{
+        //     alert("please enter data");
+        //    }
+        //   document.getElementById('user').value="";
+    
+        // }
+    var newuser=[];
+        function sampleuser(){
+         var newuser1=document.getElementById('user').value;
+         newuser.push(newuser1);
+         document.getElementById('user').value="";
+        updateview();
+
+        }
+        function updateview(){
+            document.getElementById('userlist').innerHTML="";
+        for(i=0;i<newuser.length;i++){
+        document.getElementById('userlist').innerHTML  +="<li>"+ newuser[i]+"</li>";
+    }
+}
+    </script>
+    </body>
+    </html>
