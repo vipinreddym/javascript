@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SearchWithChecBox</title>
+</head>
+<body>
+    <input type="checkbox" id="mobiles">mobiles<br>
+    <input type="checkbox" id="laptops">laptops<br>
+    <input type="checkbox" id="accoceries">accoceries
+    <ul id="list">
+
+    </ul>
+    <script>
+        var inputmobile = ["moto","lenovo","mi","1plus","infinix","nokia"];
+        var inputlaptops = ["asus","laenovo","dell","hp","samsung","lg"];
+        var inputaccoceries = ["ram","hardisk","smps","toolkit","processors"];
+        // document.write(inputmobile);
+        document.getElementById('list').innerHTML +=  "<li>"+inputmobile+"</li>";
+        document.getElementById('list').innerHTML +=  "<li>"+inputlaptops+"</li>";
+        document.getElementById('list').innerHTML +=  "<li>"+inputaccoceries+"</li>";
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="user">
+        <button onclick="myfunction()">click</button>
+        <ul id="list">
+    
+        </ul>
+        <script>
+             var input=["vipin mtw labs software trainee",
+                            "sukumar from accenture",
+                            "ganesh is traineer",
+                            "rohith mtw ceo",
+                            "nagesh traineer",
+                            "adarsh from dgital marketing",
+                            "abhinesh from telicom services"];
+           
+             for(var i=0;i<input.length;i++)
+             {
+                 document.getElementById('list').innerHTML += "<li>"+ input[i] +"</li>"; 
+             }
+             var output = [];
+
+              function myfunction( ) {
+     
+     output = [];
+         var str = document.getElementById("user").value;
+         
+         for (i = 0; i < input.length; i++) {
+             if (input[i].includes(str)) {
+                 output.push(input[i]);                
+             }
+
+         }
+         if (output.length == 0) {
+             alert("No valid match found");
+         }else{
+             document.getElementById('list').innerHTML = "";
+             for(var j=0;j<output.length;j++){
+                 document.getElementById('list').innerHTML += "<li>" + output[j] + "  </li>";
+             
+             }
+
+         }
+     }
+     
+
+        </script>
+    </body>
+</html>
